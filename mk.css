@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: black;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.heart{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 20px 90px red;
+    animation: heart 2s linear infinite;
+    left: 16%;
+    top: 16%;
+    z-index: 1;
+}
+.heart::before{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    top: -50%;
+    position: absolute;
+    content: '';
+    border-radius: 50px;
+}
+.heart::after{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    right: -50%;
+    position: absolute;
+    content: '';
+    border-radius: 50px;
+}
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.09);
+
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0)
+
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.02)
+
+    }
+    
+}
+.circle{
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid skyblue;
+    animation: he 2s linear infinite;
+    left: 40%;
+    top: 40%;
+    
+    
+}
+@keyframes he {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360);
+        background-color: skyblue;
+        transition: 2s;
+    }
+    
+}
+.square{
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    border: 5px solid whitesmoke;
+    position: absolute;
+    left: 35%;
+    animation: se 2s linear infinite; 
+}
+@keyframes se {
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(360);
+        transition: 2s;
+    }
+}
